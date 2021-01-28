@@ -1,0 +1,25 @@
+{
+  "name": "auto_fill",
+  "version": "1.0.0",
+  "description": "auto-download graph",
+  "main": "index.js",
+  "author": "leizhang",
+  "license": "MIT",
+  "scripts": {
+    "create-bookmarklet": "yarn babel && yarn uglifyfolder",
+    "babel": "./node_modules/.bin/babel src/*.js --out-dir lib/",
+    "eslint": "./node_modules/.bin/eslint src/auto-download.js",
+    "uglify": "./node_modules/.bin/uglifyjs lib/simply-auto-download.js -o lib/simply-auto-download-mini.js --mangle --beautify beautify=false,quote_style=3",
+    "uglifyfolder": "./node_modules/.bin/uglifyjs-folder ./lib -eo ./lib/ --mangle --beautify beautify=false,quote_style=3"
+
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "eslint": "^7.18.0",
+    "uglify-js": "^3.12.5",
+    "uglifyjs-folder": "^2.0.0"
+  }
+}
