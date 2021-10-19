@@ -1,0 +1,6 @@
+<p>
+    Drag this bookmarklet to your browser toolbar 
+    <a href='javascript:!function(){!function(){const e=document.querySelector("button[aria-label='More send options']");e?(e.click(),setTimeout(()=>{const e=document.querySelectorAll("button.ms-ContextualMenu-link")[1];e?(e.click(),setTimeout(()=>{const{date:e,time:t}=function(){const e=new Date,t=e.toLocaleDateString("en-US"),o=e.getHours(),n=o>12?"PM":"AM",c=o%12;let u=e.getMinutes()+5;return u=("0"+u).slice(-2),{date:t,time:`${c}:${u} ${n}`}}(),o=document.querySelector(".ms-DatePicker-event--without-label").previousSibling,n=document.querySelector("input.ms-ComboBox-Input"),c=document.querySelector("button.ms-Button--icon.ms-ComboBox-CaretDown-button");c.click(),setTimeout(()=>{if(c.click(),o&&n){o.value=e,n.value=t;const c=new Event("input",{bubbles:!0,cancelable:!0});o.dispatchEvent(c),n.dispatchEvent(c)}else console.error("no date tag")},200)},400)):console.error("No send sendLaterBtn")},400)):console.error("No send daylay tag")}()}();'>
+        make a bookmarklet
+    </a>
+</p>
